@@ -1,64 +1,134 @@
 // Banco de dados dos produtos
 
-const data = [
+const data_base = [
   {
     id: 1,
-    img: "../img/jaqueta.svg",
-    nameItem: "Lightweight Jacket",
+    img: "../img/mouse-gamer-bmax.png",
+    nameItem: "Mouse Gamer Profissional B-Max X8",
     description:
-      "Adicione um pouco de energia ao seu guarda-roupa de inverno com esta jaqueta vibrante...",
-    value: 100,
+      "Mouse ideal para Gamers que gostam de produtos de qualidade, totalmente completo, 6 botões + Scroll.",
+    value: 485,
     addCart: "Adicionar ao carrinho",
-    tag: ["Camisetas"],
+    tag: ["Mouses"],
   },
   {
     id: 2,
-    img: "../img/gorro.svg",
-    nameItem: "Black Hat",
+    img: "../img/mouse-gamer-redragon-storm-elite-m988-rgb.png",
+    nameItem: "Mouse Gamer Redragon Storm Elite M988 - RGB",
     description:
-      "O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que...",
-    value: 100,
+      "Tenha precisão absoluta em suas partidas com o Storm Elite. Descubra um estilo moderno e inovador com efeitos de iluminação Chroma RGB presente no Storm Elite.",
+    value: 247,
     addCart: "Adicionar ao carrinho",
-    tag: ["Acessórios"],
+    tag: ["Mouses"],
   },
   {
     id: 3,
-    img: "../img/mascara.svg",
-    nameItem: "Mask",
+    img: "../img/mouse-gamer-sem-fio-logitech.png",
+    nameItem: "Mouse Gamer Sem Fio - Logitech G603 Preto",
     description:
-      "Esta máscara facial durável é feita de duas camadas de tecido tratado e possui presilhas...",
-    value: 40,
+      "O mouse gamer sem fio G603 da Logitech com o revolucionário novo sensor ótico HERO, fornece um desempenho líder da classe.",
+    value: 369,
+    addCart: "Adicionar ao carrinho",
+    tag: ["Mouses"],
+  },
+  {
+    id: 4,
+    img: "../img/hd-externo-portatil-seagate-500gb.png",
+    nameItem: "HD Externo Portatil Seagate Expansion 500 GB",
+    description:
+      "O HD perfeito para backups, armazenamento de músicas, vídeos, filmes, fotos/imagens e todos os tipos de arquivos disponíveis.",
+    value: 280,
     addCart: "Adicionar ao carrinho",
     tag: ["Acessórios"],
   },
   {
-    id: 4,
-    img: "../img/camiseta_preta.svg",
-    nameItem: "T-Shirt",
-    description:
-      "Esta t-shirt é imprescindível no seu guarda-roupa, combinando o caimento intemporal de...",
-    value: 100,
-    addCart: "Adicionar ao carrinho",
-    tag: ["Camisetas"],
-  },
-  {
     id: 5,
-    img: "../img/camiseta_branca.svg",
-    nameItem: "Short-Sleeve T-Shirt",
+    img: "../img/mesa-notebook-cooler-mouse-pad-articulado.png",
+    nameItem: "Mesa Notebook Suporte C/ Cooler Mouse Pad Articulado",
     description:
-      "Agora você encontrou a camiseta básica do seu guarda-roupa. É feito de um mais grosso...",
-    value: 100,
+      "Execlente suporte para atender suas necessidades e gerar conforto no dia a dia.",
+    value: 138.90,
     addCart: "Adicionar ao carrinho",
-    tag: ["Camisetas"],
+    tag: ["Acessórios"],
   },
   {
     id: 6,
-    img: "../img/moletom.svg",
-    nameItem: "Champion Packable Jacket",
+    img: "../img/suporte-notebook-2-coolers-multilaser.png",
+    nameItem: "Suporte Notebook C/ 2 Coolers Multilazer",
     description:
-      "Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...",
-    value: 100,
+      "O produto certo com um potente sistema de resfriamento, impedindo o super aquecimento do seu notebook.",
+    value: 109.90,
     addCart: "Adicionar ao carrinho",
-    tag: ["Camisetas"],
+    tag: ["Acessórios"],
   },
+  {
+    id: 7,
+    img: "../img/mouse-pag-gamer-speed-fortrek.png",
+    nameItem: "Mouse Pad Gamer Speed Fortrek",
+    description:
+      "Perfeito para jogar, proporcionando mais rapidez, precisão nos movimentos e maior deslize do mouse.",
+    value: 22,
+    addCart: "Adicionar ao carrinho",
+    tag: ["Acessórios"],
+  },
+  {
+    id: 8,
+    img: "../img/headset-gamer-rgb-blackfire-fortrek.png",
+    nameItem: "Headset Gamer RGB Blackfire Fortrek",
+    description:
+      "Tenha uma maior imersão enquanto joga, aprovetando toda a qualidade sonora.",
+    value: 125.70,
+    addCart: "Adicionar ao carrinho",
+    tag: ["Headsets"],
+  },
+  {
+    id: 9,
+    img: "../img/headset-gamer-hyperx-cloudx-stinger.png",
+    nameItem: "Headset Gamer HyperX CloudX Stinger Preto e Verde",
+    description:
+      "O Headset certo para quem quer aproveitar toda a qualidade sonora dos jogos em Xbox One e Xbox Série X e S.",
+    value: 259.90,
+    addCart: "Adicionar ao carrinho",
+    tag: ["Headsets"],
+  },
+  {
+    id: 10,
+    img: "../img/headset-gamer-evolut.png",
+    nameItem: "Headset Gamer Evolut",
+    description:
+      "Perfeito para te proporcionar conforto, eliminando ruídos externos e gerando melhor qualidade sonora.",
+    value: 65.80,
+    addCart: "Adicionar ao carrinho",
+    tag: ["Headsets"],
+  },
+  {
+    id: 11,
+    img: "../img/teclado-sem-fio-logitech-preto.png",
+    nameItem: "Teclado sem Fio Logitech Preto",
+    description:
+      "Tenha conforto e o máximo de coveniência e abusa da incrivel durabilidade de 24 meses das pilhas inclusas.",
+    value: 164.99,
+    addCart: "Adicionar ao carrinho",
+    tag: ["Teclados"],
+  },
+  {
+    id: 12,
+    img: "../img/teclado-gamer-multimidia-led-rgb-lehmox.png",
+    nameItem: "Teclado Gamer RGB Semi Mecânico Lehmox",
+    description:
+      "Aproveite aos máximo o conforto proporcionado pelo apoio para descanso dos pulsos.",
+    value: 84.90,
+    addCart: "Adicionar ao carrinho",
+    tag: ["Teclados"],
+  },
+  {
+    id: 13,
+    img: "../img/teclado-gamer-multimídia-usb-exbom.png",
+    nameItem: "Teclado Gamer Multimídia USB EXBOM",
+    description:
+      "Indicado para uso diário, seja escritório ou em casa. Suas teclas macias e silenciosas facilitam a digitação, garantindo o conforto e a comodidade.",
+    value: 79.00,
+    addCart: "Adicionar ao carrinho",
+    tag: ["Teclados"],
+  }
 ];
