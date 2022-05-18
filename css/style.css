@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body{
-    background-color: #c3cfeb;
+    background-color: #b5c5eb;
     display: flex;
     flex-direction: column;
 }
 
-.barra-superior{
+header{
     background-color: #f5f5f5;
     border-bottom: solid #a7a7a7 1px;
     width: 100%;
@@ -14,7 +14,7 @@ body{
     z-index: 2; 
 }
 
-.barra-superior .container-barra-superior{
+header .container-barra-superior{
     background-color: #f5f5f5;
     height: 70px;
     display: flex;
@@ -40,10 +40,11 @@ body{
     font-weight: 700;
     text-decoration: none;
     padding: 5px 10px;
+    transition: 400ms;
 }
 
 .container-barra-superior .container-menu .nav-menu ul li a:hover{
-    transition: 500ms;
+    transition: 400ms;
     color: #ffffff;
     background-color: #555555;
     border-radius: 5px;
@@ -75,6 +76,7 @@ body{
     border: solid 2px transparent;
     box-shadow: 2px 2px 10px rgb(199, 199, 199);
     background-color: #f5f4f4;
+    transition: 300ms;
 }
 
 .produtos .container-produtos .card-produto:hover{
@@ -102,6 +104,7 @@ body{
 
 .produtos .container-produtos .card-produto .card-produto-interno .imagem-produto .imagem{
     height: 200px;
+    transition: 500ms;
 }
 
 .produtos .container-produtos .card-produto .card-produto-interno .imagem-produto .imagem:hover{
@@ -156,6 +159,7 @@ body{
     border-radius: 5px;
     height: 30px;
     width: 266px;
+    transition: 500ms;
 }
 
 .produtos .container-produtos .card-produto .card-produto-interno .botao-add-carrinho .botao:hover{
@@ -164,8 +168,7 @@ body{
     font-size: 14px;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    border: solid 1px #3a3a3a;
-    transition: 400ms;
+    transition: 500ms;
 }
 
 .produtos .carrinho-pesquisa{
@@ -200,6 +203,16 @@ body{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    border: solid 1px transparent;
+    transition: 500ms;
+}
+
+.produtos .carrinho-pesquisa .pesquisa .pesquisar:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: solid 1px #000000;
+    font-weight: 600;
+    transition: 300ms;
 }
 
 .produtos .carrinho-pesquisa .carrinho{
