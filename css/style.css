@@ -57,6 +57,7 @@ body{
 
 .produtos .container-produtos{
     margin-top: 10px;
+    margin-right: 350px;
     width: 970px;
     display: flex;
     justify-content: space-evenly;
@@ -173,6 +174,8 @@ body{
     margin-top: 10px;
     display: flex;
     flex-direction: column;
+    position: fixed;
+    margin-left: 1000px;
 }
 
 .produtos .carrinho-pesquisa .pesquisa{
