@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body{
-    background-color: #b5c5eb;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
 }
 
 header{
-    background-color: #f5f5f5;
-    border-bottom: solid #a7a7a7 1px;
+    background-color: #f8f8f8;
+    border-bottom: solid #d1d1d1 1px;
     width: 100%;
     position: fixed;
-    z-index: 2; 
+    z-index: 2;
 }
 
 header .container-barra-superior{
-    background-color: #f5f5f5;
+    background-color: #f8f8f8;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -40,13 +40,13 @@ header .container-barra-superior{
     font-weight: 700;
     text-decoration: none;
     padding: 5px 10px;
-    transition: 400ms;
+    transition: 500ms;
 }
 
 .container-barra-superior .container-menu .nav-menu ul li a:hover{
-    transition: 400ms;
+    transition: 500ms;
     color: #ffffff;
-    background-color: #555555;
+    background-color: #05038B;
     border-radius: 5px;
 }
 
@@ -58,17 +58,19 @@ header .container-barra-superior{
 
 .produtos .container-produtos{
     margin-top: 10px;
-    margin-right: 350px;
-    width: 970px;
+    margin-right: 400px;
+    width: 1000px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: left;
     flex-wrap: wrap;
+
 }
 
 .produtos .container-produtos .card-produto{
-    width: 296px;
+    width: 30%;
     height: 408px;
     margin-bottom: 30px;
+    margin-left: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +93,6 @@ header .container-barra-superior{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    text-align: justify;
 }
 
 .produtos .container-produtos .card-produto .card-produto-interno .imagem-produto{
@@ -134,6 +135,7 @@ header .container-barra-superior{
     font-size: 18px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
+    text-align: left;
 }
 
 .produtos .container-produtos .card-produto .card-produto-interno .descricao-produto .descricao{
@@ -141,12 +143,14 @@ header .container-barra-superior{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #000000;
+    text-align: left;
 }
 
 .produtos .container-produtos .card-produto .card-produto-interno .preco-produto .preco{
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
+    color: #ff0000;
 }
 
 .produtos .container-produtos .card-produto .card-produto-interno .botao-add-carrinho .botao{
@@ -183,12 +187,14 @@ header .container-barra-superior{
 
 .produtos .carrinho-pesquisa .pesquisa{
     display: flex;
+    justify-content: space-around;
 }
 
 .produtos .carrinho-pesquisa .pesquisa input{
-    width: 230px;
+    width: 225px;
     box-sizing: border-box;
     font-size: 16px;
+    border-radius: 5px;
 }
 
 .produtos .carrinho-pesquisa .pesquisa .pesquisar{
@@ -204,25 +210,27 @@ header .container-barra-superior{
     align-items: center;
     box-sizing: border-box;
     border: solid 1px transparent;
+    border-radius: 5px;
     transition: 500ms;
 }
 
 .produtos .carrinho-pesquisa .pesquisa .pesquisar:hover{
-    background-color: #ffffff;
+    background-color: #dbdbdb;
     color: #000000;
-    border: solid 1px #000000;
-    font-weight: 600;
+    border: solid 1px #6b6b6b;
+    font-weight: 700;
     transition: 300ms;
 }
 
 .produtos .carrinho-pesquisa .carrinho{
     background-color: #e6e6e6;
     width: 300px;
-    height: 260px;
+    height: 300px;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
+    border: solid 1px #c0c0c0;
 }
 
 .produtos .carrinho-pesquisa .carrinho .container-titulo-carrinho .titulo-carrinho{
@@ -243,17 +251,81 @@ header .container-barra-superior{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
+    height: 300px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    overflow-y: scroll;
 }
 
-.produtos .carrinho-pesquisa .carrinho .container-compras .carrinho-vazio{
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    height: 300px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio .carrinho-vazio{
     font-size: 22px;
     font-family: 'Inter', sans-serif;
     font-weight: 700;
 }
 
-.produtos .carrinho-pesquisa .carrinho .container-compras .add-itens{
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio .add-itens{
     font-size: 14px;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
+
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio .card-carrinho{
+    background-color: #ffffff;
+    width: 272px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: solid 1px #000000;
+}
+
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio .card-carrinho .produto-div-img{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #d6d6d6;
+}
+
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio .card-carrinho .produto-div-img .produto-img{
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio .card-carrinho .produto-div-info{
+    width: 182px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 5px;
+}
+
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio .card-carrinho .produto-div-info .produto-nome{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.produtos .carrinho-pesquisa .carrinho .container-compras-vazio .card-carrinho .produto-div-info .produto-preco{
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #ff0000;
+}
+
+
