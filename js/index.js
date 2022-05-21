@@ -1,60 +1,60 @@
 
 function criarCard(produto){
 
-    const cardProduto        = document.createElement('div');
-    const cardProdutoInterno = document.createElement('div');
-    const divImagem          = document.createElement('div');
-    const divCategoria       = document.createElement('div');
-    const divNome            = document.createElement('div');
-    const divDescricao       = document.createElement('div');
-    const divPreco           = document.createElement('div');
-    const divAddCarrinho     = document.createElement('div');
-    const imagem             = document.createElement('img');
-    const categoria          = document.createElement('h3');
-    const nome               = document.createElement('h2');
-    const descricao          = document.createElement('h4');
-    const preco              = document.createElement('h5');
-    const addCarrinho        = document.createElement('button');
+    const cardProduto           = document.createElement('div');
+    const cardProdutoInterno    = document.createElement('div');
+    const divImagem             = document.createElement('div');
+    const divCategoria          = document.createElement('div');
+    const divNome               = document.createElement('div');
+    const divDescricao          = document.createElement('div');
+    const divPreco              = document.createElement('div');
+    const divAddCarrinho        = document.createElement('div');
+    const imagem                = document.createElement('img');
+    const categoria             = document.createElement('h3');
+    const nome                  = document.createElement('h2');
+    const descricao             = document.createElement('h4');
+    const preco                 = document.createElement('h5');
+    const addCarrinho           = document.createElement('button');
     
-    cardProduto              .classList.add('card-produto');
-    cardProdutoInterno       .classList.add('card-produto-interno');
-    divImagem                .classList.add('imagem-produto');
-    divCategoria             .classList.add('categoria-produto');
-    divNome                  .classList.add('nome-produto');
-    divDescricao             .classList.add('descricao-produto');
-    divPreco                 .classList.add('preco-produto');
-    divAddCarrinho           .classList.add('botao-add-carrinho');
-    imagem                   .classList.add('imagem');
-    categoria                .classList.add('categoria');
-    nome                     .classList.add('nome');
-    descricao                .classList.add('descricao');
-    preco                    .classList.add('preco');
-    addCarrinho              .classList.add('botao');
+    cardProduto                 .classList.add('card-produto');
+    cardProdutoInterno          .classList.add('card-produto-interno');
+    divImagem                   .classList.add('imagem-produto');
+    divCategoria                .classList.add('categoria-produto');
+    divNome                     .classList.add('nome-produto');
+    divDescricao                .classList.add('descricao-produto');
+    divPreco                    .classList.add('preco-produto');
+    divAddCarrinho              .classList.add('botao-add-carrinho');
+    imagem                      .classList.add('imagem');
+    categoria                   .classList.add('categoria');
+    nome                        .classList.add('nome');
+    descricao                   .classList.add('descricao');
+    preco                       .classList.add('preco');
+    addCarrinho                 .classList.add('botao');
     
-    imagem.src               = produto.img;
-    imagem.alt               = produto.imgAlt;
-    categoria.innerText      = produto.tag;
-    nome.innerText           = produto.nameItem;
-    descricao.innerText      = produto.description;
-    preco.innerText          = `R$${produto.value.toFixed(2)}`;
-    addCarrinho.innerText    = produto.addCart;
-    addCarrinho.id           = produto.id
+    imagem.src                  = produto.img;
+    imagem.alt                  = produto.imgAlt;
+    categoria.innerText         = produto.tag;
+    nome.innerText              = produto.nameItem;
+    descricao.innerText         = produto.description;
+    preco.innerText             = `R$${produto.value.toFixed(2)}`;
+    addCarrinho.innerText       = produto.addCart;
+    addCarrinho.id              = produto.id
     
-    cardProduto              .appendChild(cardProdutoInterno)
-    cardProdutoInterno       .appendChild(divImagem);
-    cardProdutoInterno       .appendChild(divCategoria);
-    cardProdutoInterno       .appendChild(divNome);
-    cardProdutoInterno       .appendChild(divDescricao);
-    cardProdutoInterno       .appendChild(divPreco);
-    cardProdutoInterno       .appendChild(divAddCarrinho);
-    divImagem                .appendChild(imagem);
-    divCategoria             .appendChild(categoria);
-    divNome                  .appendChild(nome);
-    divDescricao             .appendChild(descricao);
-    divPreco                 .appendChild(preco);
-    divAddCarrinho           .appendChild(addCarrinho);
+    cardProduto                 .appendChild(cardProdutoInterno)
+    cardProdutoInterno          .appendChild(divImagem);
+    cardProdutoInterno          .appendChild(divCategoria);
+    cardProdutoInterno          .appendChild(divNome);
+    cardProdutoInterno          .appendChild(divDescricao);
+    cardProdutoInterno          .appendChild(divPreco);
+    cardProdutoInterno          .appendChild(divAddCarrinho);
+    divImagem                   .appendChild(imagem);
+    divCategoria                .appendChild(categoria);
+    divNome                     .appendChild(nome);
+    divDescricao                .appendChild(descricao);
+    divPreco                    .appendChild(preco);
+    divAddCarrinho              .appendChild(addCarrinho);
 
-    document                 .querySelector('.container-produtos').appendChild(cardProduto);
+    document.querySelector('.container-produtos').appendChild(cardProduto);
 
     addCarrinho.addEventListener('click', produto_selecionado);
 
@@ -121,6 +121,7 @@ function produto_selecionado(e){
         }
     }
 }
+
 function listarProdutos(produtos){
     for(let i = 0; i < produtos.length; i++){
         const produto = produtos[i];
@@ -131,75 +132,76 @@ listarProdutos(data_base);
 
 
 /* -------------------------remover produto do carrinho------------------------------ */
-/* Falta desenvolver */
 
-
-
-/* ----------------------filtrando por categoria---------------------------- */
-
-document.querySelector('.todos')        .addEventListener('click', listar_todos)
-document.querySelector('.mouses')       .addEventListener('click', listar_mouses)
-document.querySelector('.teclados')     .addEventListener('click', listar_teclados)
-document.querySelector('.headsets')     .addEventListener('click', listar_headsets)
-document.querySelector('.acessorios')   .addEventListener('click', listar_acessorios)
-
-function listar_todos(produtos){
-    document.querySelector('.container-produtos').innerHTML = ''
-    for(let i = 0; i < data_base.length; i++){
-        criarCard(data_base[i])
+function remover_produto_selecionado(e){
+    document.querySelector('.container-compras-vazio').innerHTML = ''
+    const resultado = e.path[0].id
+    for(let i = 0; i < produtos_no_carrinho.length; i++){
+        const produto = produtos_no_carrinho[i];
+        if(produto.id == resultado){
+            const remover = produtos_no_carrinho.indexOf(produtos_no_carrinho[i])
+            produtos_no_carrinho.splice(remover, 1)
+            for(let u = 0; u < produtos_no_carrinho.length; u++){
+                criarCardCarrinho(produtos_no_carrinho[u])
+            }
+            break
+        }
     }
 }
 
-function listar_mouses(produtos){
+/* -------------------------------------filtrando por categoria-------------------------------------------- */
+
+document.querySelector('.todos')        .addEventListener('click', click_categoria)
+document.querySelector('.mouses')       .addEventListener('click', click_categoria)
+document.querySelector('.teclados')     .addEventListener('click', click_categoria)
+document.querySelector('.headsets')     .addEventListener('click', click_categoria)
+document.querySelector('.acessorios')   .addEventListener('click', click_categoria)
+
+function click_categoria(e){
+
     document.querySelector('.container-produtos').innerHTML = ''
+
+    const id_categoria = e.path[0].id
+
     for(let i = 0; i < data_base.length; i++){
-        if(data_base[i].tag == 'Mouses'){
+
+        if(id_categoria == 'todos'){
+            criarCard(data_base[i])
+        }
+
+        else if(id_categoria == 'mouses'     && data_base[i].tag == 'Mouses'){
+            criarCard(data_base[i])
+        }
+
+        else if(id_categoria == 'teclados'   && data_base[i].tag == 'Teclados'){
+            criarCard(data_base[i])
+        }
+
+        else if(id_categoria == 'headsets'   && data_base[i].tag == 'Headsets'){
+            criarCard(data_base[i])
+        }
+
+        else if(id_categoria == 'acessorios' && data_base[i].tag == 'Acessórios'){
             criarCard(data_base[i])
         }
     }
 }
 
-function listar_teclados(produtos){
-    document.querySelector('.container-produtos').innerHTML = ''
-    for(let i = 0; i < data_base.length; i++){
-        if(data_base[i].tag == 'Teclados'){
-            criarCard(data_base[i])
-        }
-    }
-}
 
-function listar_headsets(produtos){
-    document.querySelector('.container-produtos').innerHTML = ''
-    for(let i = 0; i < data_base.length; i++){
-        if(data_base[i].tag == 'Headsets'){
-            criarCard(data_base[i])
-        }
-    }
-}
-
-function listar_acessorios(produtos){
-    document.querySelector('.container-produtos').innerHTML = ''
-    for(let i = 0; i < data_base.length; i++){
-        if(data_base[i].tag == 'Acessórios'){
-            criarCard(data_base[i])
-        }
-    }
-}
-
-/* ----------------------filtrando por pesquisa---------------------------- */
+/* ---------------------------------filtrando por pesquisa------------------------------------------------- */
 /* por enquando apenas uma palavra por vez ou nome completo  */
 
 const botao_pesquisar = document.querySelector('.pesquisar')
 const texto_pesquisa  = document.querySelector('input');
-console.log(texto_pesquisa)
 
-botao_pesquisar.addEventListener('click', pesquisar_produto)
+botao_pesquisar   .addEventListener('click', pesquisar_produto /* && listar_nomes */)
+texto_pesquisa    .addEventListener('keypress', enter_key /* && listar_nomes */)
 
-texto_pesquisa.addEventListener('keypress', function(e){
+function enter_key(e){
     if(e.key === 'Enter'){
         pesquisar_produto()
     }
-})
+}
 
 function pesquisar_produto(){
     document.querySelector('.container-produtos').innerHTML = ''
@@ -214,8 +216,7 @@ function pesquisar_produto(){
         }
     }
 }
-
-function listarNomes(produtos){
+function listar_nomes(produtos){
     const listaNomes = [];
     for(let i = 0; i < produtos.length; i++){
         const arrayNomes = produtos[i].nameItem.split(' ')
@@ -227,5 +228,5 @@ function listarNomes(produtos){
     }
     return listaNomes
 }
-listarNomes(data_base)
+
 

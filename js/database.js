@@ -1,5 +1,3 @@
-// Banco de dados dos produtos
-
 const data_base = [
   {
     id: 1,
